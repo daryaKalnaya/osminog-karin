@@ -306,8 +306,7 @@ a{color:inherit; text-decoration:none}
 
 @media (min-width: 640px) {
   .map {
-    
-    max-width: none; /* Если нужно, чтобы на больших экранах карта была во всю ширину */
+    max-width: none;
   }
 }
 

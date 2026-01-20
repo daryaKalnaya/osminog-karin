@@ -20,35 +20,35 @@
   }
 
   // Reserve modal
-  const modal = document.getElementById('reserve');
-  const openers = document.querySelectorAll('[data-open-modal="reserve"]');
-  const closers = modal ? modal.querySelectorAll('[data-close-modal]') : [];
+  // const modal = document.getElementById('reserve');
+  // const openers = document.querySelectorAll('[data-open-modal="reserve"]');
+  // const closers = modal ? modal.querySelectorAll('[data-close-modal]') : [];
 
-  function openModal() {
-    if (!modal) return;
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    const first = modal.querySelector('input, button, textarea');
-    if (first) first.focus();
-  }
+  // function openModal() {
+  //   if (!modal) return;
+  //   modal.setAttribute('aria-hidden', 'false');
+  //   document.body.style.overflow = 'hidden';
+  //   const first = modal.querySelector('input, button, textarea');
+  //   if (first) first.focus();
+  // }
 
-  function closeModal() {
-    if (!modal) return;
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
+  // function closeModal() {
+  //   if (!modal) return;
+  //   modal.setAttribute('aria-hidden', 'true');
+  //   document.body.style.overflow = '';
+  // }
 
-  openers.forEach((btn) => btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    openModal();
-  }));
-  closers.forEach((el) => el.addEventListener('click', closeModal));
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      closeModal();
-      closeLightbox();
-    }
-  });
+  // openers.forEach((btn) => btn.addEventListener('click', (e) => {
+  //   e.preventDefault();
+  //   openModal();
+  // }));
+  // closers.forEach((el) => el.addEventListener('click', closeModal));
+  // document.addEventListener('keydown', (e) => {
+  //   if (e.key === 'Escape') {
+  //     closeModal();
+  //     closeLightbox();
+  //   }
+  // });
 
   // Fake form submit (static site)
   const form = document.getElementById('reserve-form');

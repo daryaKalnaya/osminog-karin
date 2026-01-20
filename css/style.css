@@ -298,6 +298,19 @@ a{color:inherit; text-decoration:none}
   overflow: hidden;
 }
 
+.map {
+  max-width: 586px;
+  height: 372px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .map {
+    
+    max-width: none; /* Если нужно, чтобы на больших экранах карта была во всю ширину */
+  }
+}
+
 /* Footer */
 .footer__top{display:flex; justify-content:space-between; gap:24px; align-items:flex-start; padding: 28px 0 18px}
 .footer__brand{font-family:"Cormorant Garamond", serif; font-weight:600; letter-spacing:.20em; font-size:20px}

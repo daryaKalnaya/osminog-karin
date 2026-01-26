@@ -235,15 +235,18 @@
 
           <div class="gallery">
             <a class="gallery__item" href="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" data-lightbox>
-              <img src="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" alt="Интерьер ресторана на ул. Чапаева" loading="lazy" />
+              <img src="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" alt="Интерьер ресторана на ул. Чапаева" loading="lazy" data-lightbox/>
             </a>
             <a class="gallery__item" href="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" data-lightbox>
-              <img src="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" alt="Зал ресторана на ул. Чапаева" loading="lazy" />
+              <img src="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" alt="Зал ресторана на ул. Чапаева" loading="lazy" data-lightbox/>
             </a>
             <a class="gallery__item" href="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" data-lightbox>
-              <img src="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" alt="Сервировка стола в ресторане на ул. Чапаева" loading="lazy" />
+              <img src="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" alt="Сервировка стола в ресторане на ул. Чапаева" loading="lazy" data-lightbox/>
             </a>
           </div>
+          <button class="btn btn--primary btn-gallery" data-address="chapaeva">
+             Смотреть все фото
+          </button>
         </div>
 
         <!-- Второй адрес -->
@@ -257,19 +260,42 @@
           </div>
 
           <div class="gallery_reverse">
+            <a class="gallery__item" href="images/SPR_0319.JPG" data-lightbox>
+              <img src="images/SPR_0319.JPG" alt="Сервировка стола в ресторане на ул. Лермонтова" loading="lazy" data-lightbox/>
+            </a>
             <a class="gallery__item" href="images/SPR_0506.JPG" data-lightbox>
-              <img src="images/SPR_0506.JPG" alt="Сервировка стола в ресторане на ул. Лермонтова" loading="lazy" />
+              <img src="images/SPR_0506.JPG" alt="Зал ресторана на ул. Лермонтова" loading="lazy" data-lightbox/>
             </a>
             <a class="gallery__item" href="images/SPR_0416.JPG" data-lightbox>
-              <img src="images/SPR_0416.JPG" alt="Зал ресторана на ул. Лермонтова" loading="lazy" />
-            </a>
-            <a class="gallery__item" href="images/SPR_0476.JPG" data-lightbox>
-              <img src="images/SPR_0476.JPG" alt="Интерьер ресторана на ул. Лермонтова" loading="lazy" />
+              <img src="images/SPR_0416.JPG" alt="Интерьер ресторана на ул. Лермонтова" loading="lazy" data-lightbox/>
             </a>
           </div>
+          <button class="btn btn--primary btn-gallery" data-address="lermontova">
+              Смотреть все фото
+          </button>
         </div>
       </div>
     </section>
+
+    <!-- Модалка для просмотра всех фото конкретного адреса -->
+    <div class="modal-address-gallery" id="address-gallery-modal" aria-hidden="true">
+      <div class="modal-address-gallery__backdrop" data-address-modal-close></div>
+      <div class="modal-address-gallery__container">
+        <button class="modal-address-gallery__close" type="button" aria-label="Закрыть" data-address-modal-close>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <div class="modal-address-gallery__header">
+          <h3 id="modal-address-title" class=" modal-address-gallery__title"></h3>
+          <div id="modal-address-info" class="modal-address-gallery__address"></div>
+        </div>
+        
+        <div class="modal-address-gallery__content">
+          <div class="modal-address-gallery__grid" id="address-gallery-grid">
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- DELIVERY -->
     <section class="section" id="delivery">
@@ -368,7 +394,7 @@
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <div class="lightbox__backdrop" data-lightbox-close></div>
     <figure class="lightbox__figure" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
-      <button class="lightbox__close" type="button" aria-label="Закрыть" data-lightbox-close>
+      <button class="modal-address-gallery__close" type="button" aria-label="Закрыть" data-lightbox-close>
         <i class="fa-solid fa-xmark" aria-hidden="true"></i>
       </button>
       <img id="lightbox-img" alt="" />

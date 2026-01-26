@@ -363,7 +363,7 @@ a{color:inherit; text-decoration:none}
   box-shadow: 0 10px 30px rgba(15,15,15,.07);
   background:#fff;
 }
-.gallery__item img{width:100%; height: 320px; object-fit:cover}
+.gallery__item img{width:100%; height: 320px; object-fit:cover; object-position:center 68%;}
 .gallery__item:nth-child(1){grid-row: span 2}
 .gallery__item:nth-child(1) img{height: 652px}
 
@@ -756,8 +756,6 @@ a{color:inherit; text-decoration:none}
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .container > .btn-gallery:last-of-type {

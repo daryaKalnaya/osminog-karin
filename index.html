@@ -6,6 +6,7 @@
   <title>Осьминог — ресторан морепродуктов</title>
   <meta name="description" content="Осьминог — ресторан авторской кухни с морепродуктами. Саратов, ул. В.И. Чапаева, 58, Бронирование столов, меню, доставка." />
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -174,37 +175,37 @@
     </section>
 
     <!-- DISH GALLERY (menu gallery) -->
-    <section class="section" id="dish-gallery">
+    <section class="section">
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Галерея меню</h2>
           <p class="lead">Фирменные блюда и подача — крупным планом.</p>
         </div>
 
-        <div class="grid" role="list">
-          <a class="tile" href="images/DSC_2476.JPG" data-lightbox>
-            <img src="images/DSC_2476.JPG" alt="Блюдо из морепродуктов" loading="lazy" />
+        <div class="grid">
+          <a class="tile" href="images/DSC_2476.JPG" data-fancybox="grid">
+            <img src="images/DSC_2476.JPG" alt="Блюдо1" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_2163.JPG" data-lightbox>
-            <img src="images/DSC_2163.JPG" alt="Морепродукты на тарелке" loading="lazy" />
+          <a class="tile" href="images/DSC_2163.JPG" data-fancybox="grid">
+            <img src="images/DSC_2163.JPG" alt="Блюдо2" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_2662.JPG" data-lightbox>
-            <img src="images/DSC_2662.JPG" alt="Паста с морепродуктами" loading="lazy" />
+          <a class="tile" href="images/DSC_2662.JPG" data-fancybox="grid">
+            <img src="images/DSC_2662.JPG" alt="Блюдо3" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_3052.JPG" data-lightbox>
-            <img src="images/DSC_3052.JPG" alt="Осьминог на гриле" loading="lazy" />
+          <a class="tile" href="images/DSC_3052.JPG" data-fancybox="grid">
+            <img src="images/DSC_3052.JPG" alt="Блюдо4" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_3318.JPG" data-lightbox>
-            <img src="images/DSC_3318.JPG" alt="Тарелка с морепродуктами" loading="lazy" />
+          <a class="tile" href="images/DSC_3318.JPG" data-fancybox="grid">
+            <img src="images/DSC_3318.JPG" alt="Блюдо5" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_3871.JPG" data-lightbox>
-            <img src="images/DSC_3871.JPG" alt="Устрицы и лимон" loading="lazy" />
+          <a class="tile" href="images/DSC_3871.JPG" data-fancybox="grid">
+            <img src="images/DSC_3871.JPG" alt="Блюдо6" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_7996.JPG" data-lightbox>
-            <img src="images/DSC_7996.JPG" alt="Салат с морепродуктами" loading="lazy" />
+          <a class="tile" href="images/DSC_7996.JPG" data-fancybox="grid">
+            <img src="images/DSC_7996.JPG" alt="Блюдо7" loading="lazy" />
           </a>
-          <a class="tile" href="images/DSC_8032.JPG" data-lightbox>
-            <img src="images/DSC_8032.JPG" alt="Креветки и соус" loading="lazy" />
+          <a class="tile" href="images/DSC_8032.JPG" data-fancybox="grid">
+            <img src="images/DSC_8032.JPG" alt="Блюдо8" loading="lazy" />
           </a>
         </div>
 
@@ -234,19 +235,18 @@
         <div class="gallery-location">
 
           <div class="gallery">
-            <a class="gallery__item" href="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" data-lightbox>
-              <img src="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" alt="Интерьер ресторана на ул. Чапаева" loading="lazy" data-lightbox/>
+            <a class="gallery__item" href="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" data-fancybox="full-gallery-chapaeva">
+              <img src="https://saratov.travel/upload/resize_cache/iblock/654/800_800_1/7bvnaglfp60c1x2gwhroy5hvbsuzznlm.jpg" alt="Интерьер ресторана на ул. Чапаева" loading="lazy"/>
             </a>
-            <a class="gallery__item" href="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" data-lightbox>
-              <img src="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" alt="Зал ресторана на ул. Чапаева" loading="lazy" data-lightbox/>
+            <a class="gallery__item" href="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" data-fancybox="full-gallery-chapaeva">
+              <img src="https://osminog-restomarket.ru/upload/12f161c2-d07e-f987-5c3b-63e385bfc983_image_c" alt="Зал ресторана на ул. Чапаева" loading="lazy"/>
             </a>
-            <a class="gallery__item" href="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" data-lightbox>
-              <img src="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" alt="Сервировка стола в ресторане на ул. Чапаева" loading="lazy" data-lightbox/>
+            <a class="gallery__item" href="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" data-fancybox="full-gallery-chapaeva">
+              <img src="https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c" alt="Сервировка стола в ресторане на ул. Чапаева" loading="lazy"/>
             </a>
           </div>
-          <button class="btn btn--primary btn-gallery" data-address="chapaeva">
-            <i class="fa-solid fa-images"></i>
-             Смотреть все фото
+          <button class="btn btn--primary btn-gallery" data-gallery="full-gallery-chapaeva">
+            Смотреть все фото
           </button>
         </div>
 
@@ -261,25 +261,25 @@
           </div>
 
           <div class="gallery_reverse">
-            <a class="gallery__item" href="images/SPR_0319.JPG" data-lightbox>
-              <img src="images/SPR_0319.JPG" alt="Сервировка стола в ресторане на ул. Лермонтова" loading="lazy" data-lightbox/>
+            <a class="gallery__item" href="images/SPR_0319.JPG" data-fancybox="full-gallery-lermontova">
+              <img src="images/SPR_0319.JPG" alt="Интерьер ресторана на ул. Лермонтова" loading="lazy"/>
             </a>
-            <a class="gallery__item" href="images/SPR_0506.JPG" data-lightbox>
-              <img src="images/SPR_0506.JPG" alt="Зал ресторана на ул. Лермонтова" loading="lazy" data-lightbox/>
+            <a class="gallery__item" href="images/SPR_0506.JPG" data-fancybox="full-gallery-lermontova">
+              <img src="images/SPR_0506.JPG" alt="Интерьер ресторана на ул. Лермонтова" loading="lazy"/>
             </a>
-            <a class="gallery__item" href="images/SPR_0416.JPG" data-lightbox>
-              <img src="images/SPR_0416.JPG" alt="Интерьер ресторана на ул. Лермонтова" loading="lazy" data-lightbox/>
+            <a class="gallery__item" href="images/SPR_0416.JPG" data-fancybox="full-gallery-lermontova">
+              <img src="images/SPR_0416.JPG" alt="Интерьер ресторана на ул. Лермонтова" loading="lazy"/>
             </a>
-          </div>
-          <button class="btn btn--primary btn-gallery" data-address="lermontova">
+            </div>
+            <button class="btn btn--primary btn-gallery" data-gallery="full-gallery-lermontova">
               Смотреть все фото
-          </button>
+            </button>
         </div>
       </div>
     </section>
 
-    <!-- Модалка для просмотра всех фото конкретного адреса -->
-    <div class="modal-address-gallery" id="address-gallery-modal" aria-hidden="true">
+    <!-- Модалка для просмотра всех фото конкретного адреса
+    <div class="modal-address-gallery" id="address-gallery-modal" style="display: none;">
       <div class="modal-address-gallery__backdrop" data-address-modal-close></div>
       <div class="modal-address-gallery__container">
         <button class="modal-address-gallery__close" type="button" aria-label="Закрыть" data-address-modal-close>
@@ -296,7 +296,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- DELIVERY -->
     <section class="section" id="delivery">
@@ -391,18 +391,29 @@
     </div>
   </div>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox__backdrop" data-lightbox-close></div>
-    <figure class="lightbox__figure" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
-      <button class="modal-address-gallery__close" type="button" aria-label="Закрыть" data-lightbox-close>
-        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
-      </button>
-      <img id="lightbox-img" alt="" />
-      <figcaption id="lightbox-cap" class="lightbox__cap"></figcaption>
-    </figure>
-  </div>
+  <div style="display: none;">
+  <!-- Для Чапаева -->
+  <a href="images/DSC_6157.JPG" 
+     data-fancybox="full-gallery-chapaeva"></a>
+  <a href="images/DSC_6167.JPG" 
+     data-fancybox="full-gallery-chapaeva"></a>
+  <a href="images/DSC_6181.JPG" 
+     data-fancybox="full-gallery-chapaeva"></a>
+  <a href="images/DSC_6196.JPG" 
+     data-fancybox="full-gallery-chapaeva"></a>
+  <a href="images/DSC_6201.JPG" 
+     data-fancybox="full-gallery-chapaeva"></a>
+  
+  <!-- Для Лермонтова -->
+  <a href="images/SPR_0437.JPG" 
+     data-fancybox="full-gallery-lermontova"></a>
+  <a href="images/SPR_0476.JPG" 
+     data-fancybox="full-gallery-lermontova"></a>
+  <a href="images/SPR_0494.JPG" 
+     data-fancybox="full-gallery-lermontova"></a>
+</div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

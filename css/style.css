@@ -92,9 +92,7 @@ a{color:inherit; text-decoration:none}
   background:
     linear-gradient(180deg, rgba(251,250,246,.00) 0%, rgba(251,250,246,.35) 40%, rgba(251,250,246,.92) 100%),
     radial-gradient(900px 450px at 72% 15%, rgba(215,191,88,.20), rgba(215,191,88,0)),
-    url("https://osminog-restomarket.ru/upload/6699f84a-9cee-ce8f-be37-63e3861a96a0_image_c");
-    
-
+    url("../images/DSC_6212 (1).jpg");
   background-size:cover;
   background-position:center;
   filter: saturate(.95);
@@ -137,8 +135,9 @@ a{color:inherit; text-decoration:none}
 }
 
 /* Sections */
-.section{padding: 86px 0}
+.section{padding: 86px 0;}
 .section--tint{background:var(--tint)}
+.section-gallery{padding-bottom:86px;}
 .section--footer{background:#0f0f0f; color:#f4f1e8}
 .section__head{margin-bottom: 30px}
 .h2{
@@ -163,7 +162,7 @@ a{color:inherit; text-decoration:none}
   min-width: 220px;
 }
 .meta__label{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color: rgba(21,21,21,.56)}
-.meta__value{margin-top:6px; font-size:14px; color: rgba(21,21,21,.82)}
+.meta__value{margin-top:8px; font-size:14px; color: rgba(21,21,21,.82)}
 
 .about__media{position:relative}
 .media{
@@ -266,10 +265,19 @@ a{color:inherit; text-decoration:none}
   background:#fff;
   box-shadow: 0 10px 30px rgba(15,15,15,.07);
 }
-.tile img{width:100%; height: 190px; object-fit:cover; transition: transform .45s ease}
+.tile img{width:100%; height: 240px; object-fit:cover; transition: transform .45s ease}
 .tile:hover img{transform: scale(1.04)}
 
-.gallery{display:grid; grid-template-columns: 1.2fr .8fr; gap:12px}
+.gallery{display:grid; grid-template-columns: 1.2fr .8fr; gap:12px; }
+  /* padding-bottom: 20px;} */
+
+.gallery_reverse{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:12px;
+  direction: rtl;
+}
+
 .gallery__item{
   border-radius: 18px;
   overflow:hidden;
@@ -280,6 +288,58 @@ a{color:inherit; text-decoration:none}
 .gallery__item img{width:100%; height: 320px; object-fit:cover}
 .gallery__item:nth-child(1){grid-row: span 2}
 .gallery__item:nth-child(1) img{height: 652px}
+
+.container-title{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery-location {
+  margin-bottom: 4rem;
+}
+
+.gallery-location:last-child {
+  margin-bottom: 0;
+}
+
+.gallery-location__header {
+  text-align: end;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.gallery-location__title {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.gallery-location__address {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.gallery-location__address i {
+  color: #dfc55e;
+}
+
+/* Для темной темы можно добавить */
+.section--tint .gallery-location__title {
+  color: #333;
+}
+
+.section--tint .gallery-location__address {
+  color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
 
 /* Delivery */
 .delivery{
@@ -384,8 +444,10 @@ a{color:inherit; text-decoration:none}
   align-items:center;
 }
 .lightbox__figure img{
-  width:100%;
-  max-height: calc(100vh - 110px);
+  width: auto;
+  height: auto;
+  max-width: min(1100px, 90vw);
+  max-height: min(800px, 85vh);
   object-fit: contain;
   border-radius: 16px;
   background: rgba(255,255,255,.06);
@@ -393,8 +455,8 @@ a{color:inherit; text-decoration:none}
 .lightbox__close{
   position:absolute; top: 10px; right: 10px;
   width:42px; height:42px; border-radius:999px;
-  border: 1px solid rgba(255,255,255,.22);
-  background: rgba(0,0,0,.30);
+  border: 1px solid rgb(255 255 255 / 48%);
+  background: rgb(255 255 255 / 34%);
   color:#fff;
 }
 .lightbox__cap{color: rgba(255,255,255,.80); font-size:12px; letter-spacing:.08em}

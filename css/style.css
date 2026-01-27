@@ -256,7 +256,7 @@ cubic-bezier(0.78, 0.03, 0.54, 0.74);
   border: 1px solid rgba(15,15,15,.06);
   border-radius: 16px;
   padding:14px 14px;
-  min-width: 192px;
+  min-width: 100%;
   align-self: flex-start;
 } 
 .meta__label{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color: rgba(21,21,21,.56)}
@@ -513,6 +513,7 @@ cubic-bezier(0.78, 0.03, 0.54, 0.74);
 }
 
 @media (min-width: 640px) {
+
   .map {
     max-width: none;
   }
@@ -881,10 +882,15 @@ cubic-bezier(0.78, 0.03, 0.54, 0.74);
     height: 150px;
   }
 }
-
+@media(min-width: 480px){
+  .meta{
+    min-width: 192px;
+  }
+}
 @media (max-width: 480px) {
+
   .team {
-    max-width: 100%; /* На очень маленьких - на всю ширину */
+    max-width: 100%;
   }
   .modal-address-gallery__grid {
     grid-template-columns: 1fr;

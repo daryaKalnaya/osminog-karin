@@ -1,3 +1,93 @@
+// Mobile nav
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('site-nav');
+const header = document.querySelector('.site-header');
+let lastScrollY = window.scrollY;
+let ticking = false;
+const SCROLL_THRESHOLD = 150;
+let isMobileMenuOpen = false;
+
+// Функция для мобильного меню
+if (toggle && nav) {
+  toggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    isMobileMenuOpen = isOpen;
+    
+    if (isOpen) {
+      header.classList.remove('header-hidden');
+    }
+  });
+
+  nav.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (!a) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    isMobileMenuOpen = false;
+  });
+}
+
+function updateHeader() {
+  const currentScrollY = window.scrollY;
+  
+  if (isMobileMenuOpen || currentScrollY < 50) {
+    header.classList.remove('header-hidden');
+    lastScrollY = currentScrollY;
+    ticking = false;
+    return;
+  }
+  
+  if (currentScrollY > lastScrollY && currentScrollY > SCROLL_THRESHOLD) {
+    // Скролл вниз
+    header.classList.add('header-hidden');
+  } else if (currentScrollY < lastScrollY) {
+    // Скролл вверх
+    header.classList.remove('header-hidden');
+  }
+  
+  lastScrollY = currentScrollY;
+  ticking = false;
+}
+
+function onScroll() {
+  if (!ticking) {
+    window.requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768 && nav) {
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    isMobileMenuOpen = false;
+  }
+});
+
+// Код для ссылки "Наверх"
+const toTopLink = document.querySelector('.to-top');
+
+if (toTopLink) {
+  toTopLink.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    
+    header.classList.remove('header-hidden');
+    
+    if (window.location.hash === '#top') {
+      history.replaceState(null, null, ' ');
+    }
+  });
+}
+
+//fancybox
   Fancybox.bind('[data-fancybox="grid"]',{
 
     });

@@ -49,9 +49,12 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__inner">
         <div class="hero__content">
-          <p class="hero__kicker">Саратов • ул. В.И. Чапаева, 58 • ул. имени М.Ю. Лермонтова, 37</p>
-          <h1 class="hero__title">Осьминог, как символ</h1>
-          <p class="hero__subtitle">Осьминог — ресторан, который первым в Саратове так масштабно открыл морскую кухню.</p>
+          <p class="hero__kicker">Саратов • ул. В.И. Чапаева, 58 • ул.&nbsp;имени&nbsp;М.Ю.&nbsp;Лермонтова,&nbsp;37</p>
+          <p class="hero__subtitle">Вы попали в сети ресторана</p>
+          <h1 class="hero__title">ОСЬМИНОГ</h1>
+          <p class="hero__text">
+            Осьминог — ресторан, который первым в Саратове так масштабно открыл морскую кухню.
+          </p>
           <p class="hero__text">
             Мы показали, что рыба и морепродукты могут быть не просто блюдом, а настоящим гастрономическим удовольствием.
           </p>
@@ -68,29 +71,49 @@
     <!-- ABOUT -->
     <section class="section" id="about">
       <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Осьминог, как символ</h2>
-          <p class="lead">Ресторан, где море встречается с искусством</p>
-        </div>
-
         <div class="about">
           <article class="about__text">
-            <p>
-              «Осьминог» — это камерный ресторан у воды, в котором морская природа превращается в гастрономию.
-              Мы работаем с лучшими поставщиками: от свежих осьминогов и морских ежей до сезонной рыбы и
-              деликатных соусов на основе цитруса и трав.
+            <div class="section__head">
+              <h2 class="h2">Осьминог, как символ</h2>
+              <p class="lead">Ресторан, где море встречается с искусством</p>
+            </div>
+            <p class="lead">
+              Сегодня <span>ОСЬМИНОГ</span> — это два ресторана в центре города,
+              каждый со своим характером, атмосферой и настроением.
             </p>
-            <p>
-              Наш стиль — минимализм и внимание к деталям: чистые вкусы, точные текстуры и идеальная температура подачи.
-              Средиземноморская кухня с русским характером — честная, яркая, с лёгкой дерзостью.
+            <p class="lead">
+              Мы любим эстетику — в интерьере и на тарелке.
+              Готовим вкусно, красиво и с вниманием к деталям.
+              А ещё у нас большая барная карта: игристые, вина, коктейли —
+              для любого повода и настроения.
+            </p>
+            <p class="lead">
+              <span>ОСЬМИНОГ</span> — место, куда приходят за вкусом,
+              возвращаются за атмосферой
+              и остаются ради удовольствия.
             </p>
             <div class="about__meta">
               <div class="meta">
                 <div class="meta__label">Режим работы</div>
-                <div class="meta__value">12:00 — 00:00</div>
+                <div class="container-value">
+                  <div class="meta__value" style="font-weight: 700;">Пн-Чт</div>
+                  <div class="meta__value">09:00 — 23:00</div>                 
+                </div>
+                <div class="container-value">
+                  <div class="meta__value" style="font-weight: 700;">Пятница</div>
+                  <div class="meta__value">09:00 — 24:00</div>                 
+                </div>
+                <div class="container-value">
+                  <div class="meta__value" style="font-weight: 700;">Суббота</div>
+                  <div class="meta__value">10:00 — 24:00</div>                 
+                </div>
+                <div class="container-value">
+                  <div class="meta__value" style="font-weight: 700;">Воскресенье</div>
+                  <div class="meta__value">10:00 — 23:00</div>                 
+                </div>
               </div>
               <div class="meta">
-                <div class="meta__label">Адрес</div>
+                <div class="meta__label">Адреса</div>
                 <div class="meta__value">• Саратов, ул. В.И. Чапаева, 58</div>
                 <div class="meta__value">• Саратов, ул. имени М.Ю. Лермонтова, 37</div>
               </div>
@@ -273,26 +296,6 @@
       </div>
     </section>
 
-    <!-- Модалка для просмотра всех фото конкретного адреса
-    <div class="modal-address-gallery" id="address-gallery-modal" style="display: none;">
-      <div class="modal-address-gallery__backdrop" data-address-modal-close></div>
-      <div class="modal-address-gallery__container">
-        <button class="modal-address-gallery__close" type="button" aria-label="Закрыть" data-address-modal-close>
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        
-        <div class="modal-address-gallery__header">
-          <h3 id="modal-address-title" class=" modal-address-gallery__title"></h3>
-          <div id="modal-address-info" class="modal-address-gallery__address"></div>
-        </div>
-        
-        <div class="modal-address-gallery__content">
-          <div class="modal-address-gallery__grid" id="address-gallery-grid">
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <!-- DELIVERY -->
     <section class="section" id="delivery">
       <div class="container">
@@ -327,17 +330,32 @@
           </div>
           <div class="footer__cols">
             <div class="footer__col">
-              <div class="footer__label">Адрес</div>
+              <div class="footer__label">Адреса</div>
               <div class="footer__value">Саратов, ул. В.И. Чапаева, 58</div>
               <div class="footer__value">Саратов, ул. имени М.Ю. Лермонтова, 37</div>
             </div>
             <div class="footer__col">
               <div class="footer__label">Режим работы</div>
-              <div class="footer__value">12:00 — 00:00</div>
+                <div class="container-value">
+                  <div class="footer__value" style="font-weight: 700;">Пн-Чт</div>
+                  <div class="footer__value">09:00 — 23:00</div>
+                </div>
+                <div class="container-value">
+                  <div class="footer__value" style="font-weight: 700;">Пятнца</div>
+                  <div class="footer__value">09:00 — 24:00</div>
+                </div>
+                <div class="container-value">
+                  <div class="footer__value" style="font-weight: 700;">Суббота</div>
+                  <div class="footer__value">10:00 — 24:00</div>
+                </div>
+                <div class="container-value">
+                  <div class="footer__value" style="font-weight: 700;">Воскресенье</div>
+                  <div class="footer__value">10:00&nbsp;—&nbsp;23:00</div>
+                </div>
             </div>
             <div class="footer__col">
               <div class="footer__label">Связь</div>
-              <div class="footer__value">
+              <div class="footer__desc">
                 <a href="tel:+79990000000">+7 (999) 000-00-00</a><br>
                 <a href="mailto:hello@osminog.rest">hello@osminog.rest</a>
               </div>

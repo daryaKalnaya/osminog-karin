@@ -128,22 +128,18 @@ if (toTopLink) {
   toTopLink.addEventListener('click', function(e) {
     e.preventDefault();
 
-    // Показываем шапку и временно отключаем скрытие
     header.classList.remove('header-hidden');
     ignoreScroll = true;
-    
-    // Отменяем предыдущий таймаут если есть
+
     if (ignoreScrollTimeout) {
       clearTimeout(ignoreScrollTimeout);
     }
     
-    // Через 1 секунду снова включаем логику скрытия
     ignoreScrollTimeout = setTimeout(() => {
       ignoreScroll = false;
       lastScrollY = window.scrollY;
     }, 1000);
     
-    // Закрываем мобильное меню если оно открыто
     if (nav && nav.classList.contains('is-open')) {
       nav.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
@@ -187,3 +183,51 @@ if (toTopLink) {
       }
     });
   });
+
+  //модалка для заказа с конкретного ресторана
+function openDeliveryModal() {
+  const modal = document.getElementById('deliveryModal');
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeDeliveryModal() {
+  const modal = document.getElementById('deliveryModal');
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const overlay = document.querySelector('.modal__overlay');
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      closeDeliveryModal();
+    });
+  }
+  
+  const closeBtns = document.querySelectorAll('[data-close-modal]');
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      closeDeliveryModal();
+    });
+  });
+  
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      closeDeliveryModal();
+    }
+  });
+  
+  const modalContainer = document.querySelector('.modal__container');
+  if (modalContainer) {
+    modalContainer.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+});

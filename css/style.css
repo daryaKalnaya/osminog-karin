@@ -28,7 +28,7 @@ a{color:inherit; text-decoration:none}
 
 .skip-link{
   position:absolute; left:-999px; top:10px;
-  background:#000; color:#fff; padding:10px 12px; border-radius:10px; z-index:9999;
+  background:#000; color:#fff; padding:10px 12px; border-radius:10px; z-index:8888;
 }
 .skip-link:focus{left:10px}
 
@@ -305,7 +305,7 @@ cubic-bezier(0.78, 0.03, 0.54, 0.74);
   height: auto;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 18%;
 }
 
 .card__body {
@@ -1019,4 +1019,179 @@ html{scroll-behavior:smooth}
 
 .modal-address-gallery__item {
   animation: zoomIn 0.3s ease forwards;
+}
+
+
+/* Стили модального окна с выбором ресторана*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+.modal__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 650px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 29px 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.modal__close:hover {
+  background-color: #d1b058;
+  color: #333;
+}
+
+.modal__content {
+  padding: 30px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.delivery__description {
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Стили для выбора ресторана */
+.restaurant-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.restaurant-option {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.restaurant-option:hover {
+  border-color: #000000;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+.restaurant__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 12px;
+}
+
+.restaurant__name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.restaurant__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.restaurant__detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.restaurant__detail svg {
+  flex-shrink: 0;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal__container {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@media (max-width: 600px) {
+  .modal__container {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .modal__header {
+    padding: 43px 20px 14px;
+  }
+  
+  .modal__content {
+    padding: 20px;
+  }
+  
+  .restaurant-option {
+    padding: 16px;
+  }
+  
+  .restaurant__header {
+    flex-wrap: wrap;
+  }
+}
+@media(min-width:1024px){
+  .modal__container{
+    max-width: 700px;
+  }
 }
